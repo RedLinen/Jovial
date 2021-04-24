@@ -26,5 +26,6 @@ The button seen farthest from the PIC18 in the above picture was originally mean
 
 The button seen closest to the PIC18 was intended to play messages giving the user nutritional information when pressed. As with the other button, the resources to do this where not available soon enough. Currently, pressing it will play the closing bars of “When We Were Young”—again, this is a very digital rendition.
 
-## How to Build This Prototype:
+# How to Build This Prototype:
+![I hope my link doesn’t break…](Circuit_Schematic.jpg)
 

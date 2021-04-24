@@ -15,16 +15,16 @@ This protype needs to be reprogrammed by the PIC Kit 4 after every start up. The
 
 ### The Clock:
 
-Plans to program this protype for more advanced timer functions had be called off after the upper half of the B-register of the designers PIC18 stopped working. Therefore, we scaled back to a simple sixteen-minute counter with the ten LEDs seen to the right of the PIC18 in the above picture serving as a binary display. The six LEDs closest to the PIC18
-display seconds and the four LEDs farthest from the PIC18 display minutes. The clock can be reset at any time by pressing both buttons at the same time.
+Plans to program this protype for more advanced timer functions had be called off after the upper half of the B-register of the designers PIC18 stopped working. Therefore, we scaled back to a simple sixteen-minute counter with the ten LEDs seen to the left of the PIC18 in the above picture serving as a binary display. The six LEDs closest to the PIC18
+display seconds, and the four LEDs farthest from the PIC18 display minutes. The clock can be reset at any time by pressing both buttons at the same time.
 
 ### The Inspirational Message Button:
 
-The button seen farthest from the PIC18 in the above picture was originally meant to play inspirational messages when pressed. Unfortunately, the code necessary to connect the PIC18 to audio files was not available soon enough to implement this. As a stand in, pressing this button currently plays a—very digital—rendition of a couple bars from the song “When We Were Young”. Changing this to an inspiration message would be fairly straight forward after the processes of connecting the PIC18 to audio files was complete.
+The button seen farthest from the PIC18 in the above picture was originally meant to play inspirational messages when pressed. Unfortunately, the code necessary to connect the PIC18 to audio files was not available soon enough to implement this. As a stand in, pressing this button currently plays a—very digital—rendition of a couple bars from the song “When We Were Young”. Changing this to an inspirational message would be fairly straight forward after the process of connecting the PIC18 to audio files was complete.
 
 ### The Nutrition Information Button:
 
-The button seen farthest from the PIC18 was intended to play messages giving the user nutritional information when pressed. As with the other button, the resources to do this where not available soon enough. Currently, pressing it will play the closing bars of “When We Were You”—again, this is a very digital rendition.
+The button seen closest to the PIC18 was intended to play messages giving the user nutritional information when pressed. As with the other button, the resources to do this where not available soon enough. Currently, pressing it will play the closing bars of “When We Were Young”—again, this is a very digital rendition.
 
-##How to Build This Prototype:
+## How to Build This Prototype:
 

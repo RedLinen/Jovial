@@ -2,7 +2,7 @@
 
 ## Operation Instructions and Some Notes:
 
-The operation instructions included here are for prototype three of Jovial—the most advanced prototype that we were able to build. This prototype was still very early stage and lacked many of the capabilities that a more advanced prototype would have had. Instructions detailing how a more advanced version of this device might work are not included here because, in the opinion of this designer, the idea of how a product should be operated needs to move and shift as the design advances and it is possible to see, touch, carry, and drop increasingly sophisticated prototypes.
+The operation instructions included here are for prototype three of Jovial—the most advanced prototype that we were able to build. This prototype was still very early stage and lacked many of the capabilities that a more advanced prototype would have had. Instructions detailing how a more advanced version of this device might work are not included here because, in the opinion of this designer, the idea of how a product should be operated needs to move and shift as the design advances and it is possible to see, touch, carry, and drop increasingly sophisticated prototypes. Therefore, exactly how a later version would work was never fully planned out.
 
 ### Prototype Three:
 ![my link is broken?](Jovial.jpg)

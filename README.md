@@ -26,6 +26,18 @@ The button seen farthest from the PIC18 in the above picture was originally mean
 
 The button seen closest to the PIC18 was intended to play messages giving the user nutritional information when pressed. As with the other button, the resources to do this where not available soon enough. Currently, pressing it will play the closing bars of “When We Were Young”—again, this is a very digital rendition.
 
-# How to Build This Prototype:
+
+
+# How to Create Jovial Prototype 3:
+
+### Building It:
+
+Below is an image of the circuit design. This schematic is only meant to represent the circuits of the Jovial protype themselves and is not meant to suggest layout.
 ![I hope my link doesn’t break…](Circuit_Schematic.jpg)
+
+To build the prototype simply create this combination of circuits, arranged according to personal preference, on one or more breadboards. When we created our copy of this protype we chose to arrange it as can be seen in the photograph at the top of the page. This was done to make handling it as close as possible to how it would be to handle a finished version of Jovial. However, this arrangement proved be a little impractical since it left so little room on the breadboard that it was hard to experiment with the design without pulling the whole thing apart.
+
+### Programing It: 
+
+The PIC18 that serves as the brain of the Jovial prototype is programed using MPLAB and a PIC Kit 4. The source code used to run this prototype can be found within this repository in the file “Jovial.X”. Specifically, most of the code related to the functionality of the protype is located in the function “UserAppRun()” which can be found by opening “Jovial.X” then opening “Source Files” and finally opening “user_app.c” and scrolling to the bottom.
 

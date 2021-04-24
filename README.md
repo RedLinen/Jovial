@@ -43,7 +43,8 @@ The PIC18, that serves as the brain of the Jovial prototype, is programed using 
 
 #### Here is a copy of the “UserAppRun()” source code:
 
-static u16 au16Restless[] = {Bb4, Bb4, Bb4, Bb4, NN, G4, G4, G4, Ab4, Ab4, G4, G4, G4, G4,G4, F4, Eb4, Eb4, F4};
+// I tried to get it to play the very end of "when we were young" but it didn't come out super well. I may have made a mistake in the note conversions or timing somewhere.
+    static u16 au16MyTime[] = {N16, N8, N8, ND8, N16, N16, N16, N8, ND8, N16, N8, N8, //0 to 11
 
 void UserAppRun(void)
 {

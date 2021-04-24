@@ -43,7 +43,7 @@ The PIC18, that serves as the brain of the Jovial prototype, is programed using 
 
 #### Here is a copy of the “UserAppRun()” source code:
 
-Static u8 u8SongSwitch = 0;
+static u16 au16Restless[] = {Bb4, Bb4, Bb4, Bb4, NN, G4, G4, G4, Ab4, Ab4, G4, G4, G4, G4,G4, F4, Eb4, Eb4, F4};
 
 void UserAppRun(void)
 {

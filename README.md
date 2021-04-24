@@ -28,7 +28,7 @@ The button seen closest to the PIC18 was intended to play messages giving the us
 
 
 
-# How to Create Jovial Prototype 3:
+# How to Create Jovial Prototype Three:
 
 ### Building It:
 

@@ -39,10 +39,9 @@ To build the prototype simply create this combination of circuits, arranged acco
 
 ### Programing It: 
 
-The PIC18, that serves as the brain of the Jovial prototype, is programed using MPLAB and a PIC Kit 4. The source code used to run this prototype can be found within this repository in the file “Jovial.X”. Specifically, most of the code related to the functionality of the protype is located in the function “UserAppRun()” which can be found by opening “Jovial.X” then opening “Source Files” and finally opening “user_app.c” and scrolling to the bottom.
+The PIC18, that serves as the brain of the Jovial prototype, is programed using MPLAB and a PIC Kit 4. The source code used to run this prototype can be found within this repository in the file “Jovial.X”. Specifically, most of the code related to the functionality of the protype is located in the function “UserAppRun()” which can be found by opening “Jovial.X” then opening “Source Files” and finally opening “user_app.c” and scrolling to the bottom. I have also included a copy of it below for reference.
 
-#### Here is a copy of the “UserAppRun()” source code:
-
+#### “UserAppRun()” Source Code:
 ```
 void UserAppRun(void)
 {

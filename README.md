@@ -39,5 +39,179 @@ To build the prototype simply create this combination of circuits, arranged acco
 
 ### Programing It: 
 
-The PIC18 that serves as the brain of the Jovial prototype is programed using MPLAB and a PIC Kit 4. The source code used to run this prototype can be found within this repository in the file “Jovial.X”. Specifically, most of the code related to the functionality of the protype is located in the function “UserAppRun()” which can be found by opening “Jovial.X” then opening “Source Files” and finally opening “user_app.c” and scrolling to the bottom.
+The PIC18, that serves as the brain of the Jovial prototype, is programed using MPLAB and a PIC Kit 4. The source code used to run this prototype can be found within this repository in the file “Jovial.X”. Specifically, most of the code related to the functionality of the protype is located in the function “UserAppRun()” which can be found by opening “Jovial.X” then opening “Source Files” and finally opening “user_app.c” and scrolling to the bottom.
+
+#### Here is a copy of the “UserAppRun()” source code:
+
+void UserAppRun(void)
+{
+    static u8 u8CSetting = 0;
+    static u16 u16Hours = 0;
+    static u16 u16Minutes = 0;
+    static u16 u16Seconds = 0;
+    static u16 u16ClockMilS = 0;
+    
+    
+    static u8 u8SongSwitch = 0;
+    
+    static u16 au16Restless[] = {Bb4, Bb4, Bb4, Bb4, NN, G4, G4, G4, Ab4, Ab4, G4, G4, G4, G4,G4, F4, Eb4, Eb4, F4};
+    static u16 au16RestlessTime[] = {N16, N16, N16, N8, N16, N16, N16, N16, N8, ND8, N16, N16, N8, N16, N8, N16, N16, N16, N16};
+    
+    
+    // I tried to get it to play the very end of "when we were young" but it didn't come out super well. I may have made a mistake in the note conversions or timing somewhere.
+    static u16 au16MyTime[] = {N16, N8, N8, ND8, N16, N16, N16, N8, ND8, N16, N8, N8, //0 to 11
+                               ND8, N16, N16, N16, N8, N8, N16, N16, N16, N16, N16, N16, N8, N8, N4, N8, N16, N16, NT8, NT8, NT8,  // 12 -> 32
+                               ND4, N16, ND8, N16, ND16, ND8, N16, N2, N2};
+    
+    static u16 au16MyNotes[] = {Bb4, Bb4, Bb4, Bb4, G4, G4, G4, Ab4, Ab4, G4, G4, G4, // 0 -> 11
+                                G4, F4, Eb4, F4, NN, NN, Eb4, Eb4, G4, F4, Eb4, F4, F4, C4, NN, NN, Eb4, Eb4, G4, F4, Eb4,  // 12 -> 32
+                                F4, Eb4, D4, NN, Eb4, D4, Eb4, Eb4, NN};
+    static u32 u32MSeconds = 0;
+    
+    static u16 u16ThatIndexer = 26;
+    static u16 u16ThatOtherIndexer = 0;
+    u8 u8Slur  = 0;
+    
+    if((((PORTB & 0b00000001) != 0)) && ((PORTB & 0b00000010) != 0))
+    {
+        u16Minutes = 9;
+        u16Seconds = 0;
+        u16ClockMilS = 0;
+        u8SongSwitch = 0;
+        u16ThatIndexer = 26;
+        u16ThatOtherIndexer = 0;
+        u32MSeconds = 0;
+        InterruptTimerXus(0,0);
+        _delay(1000000);
+  
+    }
+    
+  
+    if(u16ClockMilS == 1000)
+    {
+        u16ClockMilS = 0;
+        u16Seconds += 1;
+    }
+    
+    if(u16Seconds == 60)
+    {
+        u16Seconds = 0;
+        u16Minutes += 1;
+    }
+    
+    if(u16Minutes == 60)
+    {
+        u16Minutes = 0;
+        u16Hours += 1;
+    }
+    
+    if(u16Hours == 15)
+    {
+        u16Hours = 0;
+    }
+    
+    
+    LATC = u16Seconds + 64 * u16Minutes;
+    LATA = u16Minutes / 4;
+    
+    u16ClockMilS += 1;
+   
+    
+    
+    
+    if((PORTB & 0b00000010) != 0)
+        {
+            u8SongSwitch  = 2;
+            InterruptTimerXus(0,0);
+            u32MSeconds == 0;
+        }
+    
+    if(u8SongSwitch == 2)
+    {
+    
+    if((u16ThatOtherIndexer == 2) || (u16ThatOtherIndexer == 8) || (u16ThatOtherIndexer == 13) || (u16ThatOtherIndexer > 14 ))
+    {
+        u8Slur = 1;
+    }
+    
+    
+    if((u32MSeconds <= (au16RestlessTime[u16ThatOtherIndexer] - RT)) || (u8Slur == 1))
+    {
+        InterruptTimerXus(au16Restless[u16ThatOtherIndexer],1);
+    }
+        if((u32MSeconds >= (au16RestlessTime[u16ThatOtherIndexer] - RT)) && (u8Slur != 1))
+    {
+        InterruptTimerXus(0,1);
+    }
+    if(u32MSeconds >=  (au16RestlessTime[u16ThatOtherIndexer]))
+    {
+        u16ThatOtherIndexer += 1;
+        u32MSeconds = 0;
+    }
+    if(u16ThatOtherIndexer == 20)
+    {
+        u16ThatOtherIndexer = 0;
+        u8SongSwitch = 0;
+        InterruptTimerXus(0,0);
+    }
+
+    u32MSeconds += 1;
+    }
+    
+     
+    
+    if(1)
+    {
+    
+    
+        if((PORTB & 0b00000001) != 0)
+        {
+            u8SongSwitch = 1;
+            
+        }
+        
+
+
+        if((u8SongSwitch == 1)){
+            // There are not many slurs so I added them like this.
+            if((u16ThatIndexer == 7) || (u16ThatIndexer == 13) || (u16ThatIndexer == 14))
+            {
+                u8Slur = 1;
+            }
+            if((u16ThatIndexer == 23) || (u16ThatIndexer == 33) || (u16ThatIndexer == 34))
+            {
+                u8Slur = 1;
+            }
+
+
+
+
+            if((u32MSeconds <= (au16MyTime[u16ThatIndexer] - RT)) || (u8Slur == 1))
+            {
+                InterruptTimerXus(au16MyNotes[u16ThatIndexer],1);
+            }
+            if((u32MSeconds >= (au16MyTime[u16ThatIndexer] - RT)) && (u8Slur != 1))
+            {
+                InterruptTimerXus(0,1);
+            }
+            if(u32MSeconds >=  (au16MyTime[u16ThatIndexer]))
+            {
+                u16ThatIndexer += 1;
+                u32MSeconds = 0;
+            }
+            if(u16ThatIndexer == 41)
+            {
+                u16ThatIndexer = 26;
+                u8SongSwitch = 0;
+                InterruptTimerXus(0,0);
+            }
+
+            u32MSeconds += 1;
+        }
+
+    }
+
+
+  
+} /* end UserAppRun() */
 

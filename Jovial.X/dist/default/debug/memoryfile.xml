@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\Jovial.X.debug.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>131072</length>
+      <used>2688</used>
+      <free>128384</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>8448</length>
+      <used>548</used>
+      <free>7900</free>
+    </memory>
+  </executable>
+</project>

@@ -11,7 +11,7 @@ This prototype requires a power source between four and five volts with five vol
 
 ### Starting the PIC18:
 
-This protype needs to be reprogrammed by the PIC Kit 4 after every start up. The source code necessary for this can be found in this repository in the file “Jovial.X”.
+This prototype needs to be reprogrammed by the PIC Kit 4 after every start up. The source code necessary for this can be found in this repository in the file “Jovial.X”.
 
 ### The Clock:
 

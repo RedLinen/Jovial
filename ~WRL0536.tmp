@@ -32,14 +32,14 @@ The button seen closest to the PIC18 was intended to play messages giving the us
 
 ### Building It:
 
-Below is an image of the circuit design. This schematic is only meant to represent the circuits of the Jovial prototype themselves and is not meant to suggest specific layout. At this point in design the goal was only to assemble the circuits for testing and no specific layout should be considered integral to what prototype three was, with one exception. The LEDs should be assembled to make the binary time counter readable.
+Below is an image of the circuit design. This schematic is only meant to represent the circuits of the Jovial protype themselves and is not meant to suggest layout.
 ![I hope my link doesn’t break…](Circuit_Schematic(2).jpg)
 
-To build the prototype simply create this combination of circuits, arranged according to personal preference, on one or more breadboards. When we created our copy of this protype we chose to arrange it as can be seen in the photograph at the top of the page. This was done to make handling it as close as possible to how it would be to handle a finished version of Jovial. However, this led to a very tight breadboard and was not very practical, so using two bread boards for reconstruction is recommended. In terms of power supply, as can be seen on the schematic, we used three AA batteries in series which gave about 4.5 volts. If preferred, a 5-volt wall supply or battery can also be used. It is not recommended to exceed five volts when operating this prototype though.
+To build the prototype simply create this combination of circuits, arranged according to personal preference, on one or more breadboards. When we created our copy of this protype we chose to arrange it as can be seen in the photograph at the top of the page. This was done to make handling it as close as possible to how it would be to handle a finished version of Jovial. However, this arrangement proved be a little impractical since it left so little room on the breadboard that it was hard to experiment with the design without pulling the whole thing apart.
 
 ### Programing It: 
 
-The PIC18, which serves as the brain of the Jovial prototype, is programed using MPLAB and a PIC Kit 4. The source code used to run this prototype can be found within this repository in the file “Jovial.X”. Specifically, most of the code related to the functionality of the protype is located in the function “UserAppRun()” which can be found by opening “Jovial.X” then opening “Source Files” and finally opening “user_app.c” and scrolling to the bottom. I have also included a copy of the souce code for this function at the bottom if the page.
+The PIC18, which serves as the brain of the Jovial prototype, is programed using MPLAB and a PIC Kit 4. The source code used to run this prototype can be found within this repository in the file “Jovial.X”. Specifically, most of the code related to the functionality of the protype is located in the function “UserAppRun()” which can be found by opening “Jovial.X” then opening “Source Files” and finally opening “user_app.c” and scrolling to the bottom. I have also included a copy of it below for reference.
 
 #### “UserAppRun()” Source Code:
 ```

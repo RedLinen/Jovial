@@ -20,7 +20,7 @@ display seconds, and the four LEDs farthest from the PIC18 display minutes. The 
 
 ### The Inspirational Message Button:
 
-The button seen farthest from the PIC18 in the above picture was originally meant to play inspirational messages when pressed. Unfortunately, the code necessary to connect the PIC18 to audio files was not available soon enough to implement this. As a stand in, pressing this button currently plays a—very digital—rendition of a couple bars from the song “When We Were Young”. Changing this to an inspirational message would be fairly straight forward after the process of connecting the PIC18 to audio files was complete.
+The button seen farthest from the PIC18 in the above picture was originally meant to play inspirational messages when pressed. Unfortunately, the code necessary to connect the PIC18 to audio files was not available soon enough to implement this. As a stand in, pressing this button currently plays a—very digital—rendition of a couple bars from the refrain of the song “When We Were Young”. Changing this to an inspirational message would be fairly straight forward after the process of connecting the PIC18 to audio files was complete.
 
 ### The Nutrition Information Button:
 

@@ -43,7 +43,7 @@ The PIC18, which serves as the brain of the Jovial prototype, is programed using
 
 ### Testing It:
 
-After the prototype is assembled, powered up, and programmed, it can be tested for proper functionality. As soon as programing is complete, the binary time counter should start counting upward from zero and should roll back to zero after counting to sixteen minutes. Pressing both buttons at the same time should set the time counter to nine minutes (it was programed to reset to nine minutes for demonstration purposes). Pressing just the button connected to the RB0 pin should play a digital version of the final bars of “When We Were Young”. Pressing just the button connected to the RB1 pin should play a couple bars from the refrain of “When We Were Young”. If it does all these things, it can be considered a working copy of Jovial Prototype Three.
+After the prototype is assembled, powered up, and programmed, it can be tested for proper functionality. As soon as programing is complete, the binary time counter should start counting upward from zero and should roll back to zero after counting to sixteen minutes. Pressing both buttons at the same time should set the time counter to nine minutes (it was programed to reset to nine minutes for demonstration purposes). Pressing just the button connected to the RB0 pin should play a digital version of the final bars of “When We Were Young”. Pressing just the button connected to the RB1 pin should play a couple bars from the refrain of “When We Were Young”. If it does all these things, it can be considered a working copy of Jovial prototype three.
 
 #### “UserAppRun()” Source Code:
 ```

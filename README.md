@@ -41,6 +41,10 @@ To build the prototype simply create this combination of circuits, arranged acco
 
 The PIC18, which serves as the brain of the Jovial prototype, is programed using MPLAB and a PIC Kit 4. The source code used to run this prototype can be found within this repository in the file “Jovial.X”. Specifically, most of the code related to the functionality of the protype is located in the function “UserAppRun()” which can be found by opening “Jovial.X” then opening “Source Files” and finally opening “user_app.c” and scrolling to the bottom. I have also included a copy of the souce code for this function at the bottom if the page.
 
+### Testing It:
+
+After the prototype is assembled, powered up, and programmed it can be tested for proper functionality. As soon as programing is complete the binary time counter should start counting upward from zero. Pressing both buttons at the same time should set it to nine minutes (it was programed to reset to nine minutes for demonstration purposes). Pressing just the button connected to the RB0 pin should play a digital version of the final bars of “When We Were Young”. Pressing just the button connected to the RB1 pin should play a couple bars from the refrain of “When We Were Young”.
+
 #### “UserAppRun()” Source Code:
 ```
 void UserAppRun(void)

@@ -33,7 +33,7 @@ The button seen closest to the PIC18 was intended to play messages giving the us
 ### Building It:
 
 Below is an image of the circuit design. This schematic is only meant to represent the circuits of the Jovial protype themselves and is not meant to suggest layout.
-![I hope my link doesn’t break…](Jovial(2).jpg)
+![I hope my link doesn’t break…](Circuit_Schematic(2).jpg)
 
 To build the prototype simply create this combination of circuits, arranged according to personal preference, on one or more breadboards. When we created our copy of this protype we chose to arrange it as can be seen in the photograph at the top of the page. This was done to make handling it as close as possible to how it would be to handle a finished version of Jovial. However, this arrangement proved be a little impractical since it left so little room on the breadboard that it was hard to experiment with the design without pulling the whole thing apart.
 

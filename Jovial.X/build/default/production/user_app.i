@@ -27508,8 +27508,6 @@ void UserAppRun(void)
     }
 
 
-
-
     if(u16ClockMilS == 1000)
     {
         u16ClockMilS = 0;
@@ -27587,7 +27585,9 @@ void UserAppRun(void)
 
     u32MSeconds += 1;
     }
-# 370 "user_app.c"
+
+
+
     if(1)
     {
 

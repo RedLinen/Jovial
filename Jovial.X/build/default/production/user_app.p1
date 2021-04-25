@@ -3298,304 +3298,304 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;user_app.c: 279:     }
 }
 [e :U 2278 ]
-"284
-[; ;user_app.c: 284:     if(u16ClockMilS == 1000)
+"282
+[; ;user_app.c: 282:     if(u16ClockMilS == 1000)
 [e $ ! == -> F15953 `ui -> -> 1000 `i `ui 2279  ]
-"285
-[; ;user_app.c: 285:     {
+"283
+[; ;user_app.c: 283:     {
 {
-"286
-[; ;user_app.c: 286:         u16ClockMilS = 0;
+"284
+[; ;user_app.c: 284:         u16ClockMilS = 0;
 [e = F15953 -> -> 0 `i `us ]
-"287
-[; ;user_app.c: 287:         u16Seconds += 1;
+"285
+[; ;user_app.c: 285:         u16Seconds += 1;
 [e =+ F15952 -> -> 1 `i `us ]
-"288
-[; ;user_app.c: 288:     }
+"286
+[; ;user_app.c: 286:     }
 }
 [e :U 2279 ]
-"290
-[; ;user_app.c: 290:     if(u16Seconds == 60)
+"288
+[; ;user_app.c: 288:     if(u16Seconds == 60)
 [e $ ! == -> F15952 `ui -> -> 60 `i `ui 2280  ]
-"291
-[; ;user_app.c: 291:     {
+"289
+[; ;user_app.c: 289:     {
 {
-"292
-[; ;user_app.c: 292:         u16Seconds = 0;
+"290
+[; ;user_app.c: 290:         u16Seconds = 0;
 [e = F15952 -> -> 0 `i `us ]
-"293
-[; ;user_app.c: 293:         u16Minutes += 1;
+"291
+[; ;user_app.c: 291:         u16Minutes += 1;
 [e =+ F15951 -> -> 1 `i `us ]
-"294
-[; ;user_app.c: 294:     }
+"292
+[; ;user_app.c: 292:     }
 }
 [e :U 2280 ]
-"296
-[; ;user_app.c: 296:     if(u16Minutes == 60)
+"294
+[; ;user_app.c: 294:     if(u16Minutes == 60)
 [e $ ! == -> F15951 `ui -> -> 60 `i `ui 2281  ]
-"297
-[; ;user_app.c: 297:     {
+"295
+[; ;user_app.c: 295:     {
 {
-"298
-[; ;user_app.c: 298:         u16Minutes = 0;
+"296
+[; ;user_app.c: 296:         u16Minutes = 0;
 [e = F15951 -> -> 0 `i `us ]
-"299
-[; ;user_app.c: 299:         u16Hours += 1;
+"297
+[; ;user_app.c: 297:         u16Hours += 1;
 [e =+ F15950 -> -> 1 `i `us ]
-"300
-[; ;user_app.c: 300:     }
+"298
+[; ;user_app.c: 298:     }
 }
 [e :U 2281 ]
-"302
-[; ;user_app.c: 302:     if(u16Hours == 15)
+"300
+[; ;user_app.c: 300:     if(u16Hours == 15)
 [e $ ! == -> F15950 `ui -> -> 15 `i `ui 2282  ]
-"303
-[; ;user_app.c: 303:     {
+"301
+[; ;user_app.c: 301:     {
 {
-"304
-[; ;user_app.c: 304:         u16Hours = 0;
+"302
+[; ;user_app.c: 302:         u16Hours = 0;
 [e = F15950 -> -> 0 `i `us ]
-"305
-[; ;user_app.c: 305:     }
+"303
+[; ;user_app.c: 303:     }
 }
 [e :U 2282 ]
-"309
-[; ;user_app.c: 309:     LATC = u16Seconds + 64 * u16Minutes;
+"307
+[; ;user_app.c: 307:     LATC = u16Seconds + 64 * u16Minutes;
 [e = _LATC -> + -> F15952 `ui * -> -> 64 `i `ui -> F15951 `ui `uc ]
-"310
-[; ;user_app.c: 310:     LATA = u16Minutes / 4;
+"308
+[; ;user_app.c: 308:     LATA = u16Minutes / 4;
 [e = _LATA -> / -> F15951 `ui -> -> 4 `i `ui `uc ]
-"318
-[; ;user_app.c: 318:     u16ClockMilS += 1;
+"316
+[; ;user_app.c: 316:     u16ClockMilS += 1;
 [e =+ F15953 -> -> 1 `i `us ]
-"323
-[; ;user_app.c: 323:     if((PORTB & 0b00000010) != 0)
+"321
+[; ;user_app.c: 321:     if((PORTB & 0b00000010) != 0)
 [e $ ! != & -> _PORTB `i -> 2 `i -> 0 `i 2283  ]
-"324
-[; ;user_app.c: 324:         {
+"322
+[; ;user_app.c: 322:         {
 {
-"325
-[; ;user_app.c: 325:             u8SongSwitch = 2;
+"323
+[; ;user_app.c: 323:             u8SongSwitch = 2;
 [e = F15954 -> -> 2 `i `uc ]
-"326
-[; ;user_app.c: 326:             InterruptTimerXus(0,0);
+"324
+[; ;user_app.c: 324:             InterruptTimerXus(0,0);
 [e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 0 `i `a ]
-"327
-[; ;user_app.c: 327:             u32MSeconds == 0;
+"325
+[; ;user_app.c: 325:             u32MSeconds == 0;
 [e == F15959 -> -> -> 0 `i `l `ul ]
-"328
-[; ;user_app.c: 328:         }
+"326
+[; ;user_app.c: 326:         }
 }
 [e :U 2283 ]
-"330
-[; ;user_app.c: 330:     if(u8SongSwitch == 2)
+"328
+[; ;user_app.c: 328:     if(u8SongSwitch == 2)
 [e $ ! == -> F15954 `i -> 2 `i 2284  ]
+"329
+[; ;user_app.c: 329:     {
+{
 "331
-[; ;user_app.c: 331:     {
+[; ;user_app.c: 331:     if((u16ThatOtherIndexer == 2) || (u16ThatOtherIndexer == 8) || (u16ThatOtherIndexer == 13) || (u16ThatOtherIndexer > 14 ))
+[e $ ! || || || == -> F15961 `ui -> -> 2 `i `ui == -> F15961 `ui -> -> 8 `i `ui == -> F15961 `ui -> -> 13 `i `ui > -> F15961 `ui -> -> 14 `i `ui 2285  ]
+"332
+[; ;user_app.c: 332:     {
 {
 "333
-[; ;user_app.c: 333:     if((u16ThatOtherIndexer == 2) || (u16ThatOtherIndexer == 8) || (u16ThatOtherIndexer == 13) || (u16ThatOtherIndexer > 14 ))
-[e $ ! || || || == -> F15961 `ui -> -> 2 `i `ui == -> F15961 `ui -> -> 8 `i `ui == -> F15961 `ui -> -> 13 `i `ui > -> F15961 `ui -> -> 14 `i `ui 2285  ]
-"334
-[; ;user_app.c: 334:     {
-{
-"335
-[; ;user_app.c: 335:         u8Slur = 1;
+[; ;user_app.c: 333:         u8Slur = 1;
 [e = _u8Slur -> -> 1 `i `uc ]
-"336
-[; ;user_app.c: 336:     }
+"334
+[; ;user_app.c: 334:     }
 }
 [e :U 2285 ]
-"339
-[; ;user_app.c: 339:     if((u32MSeconds <= (au16RestlessTime[u16ThatOtherIndexer] - (u16)(50))) || (u8Slur == 1))
+"337
+[; ;user_app.c: 337:     if((u32MSeconds <= (au16RestlessTime[u16ThatOtherIndexer] - (u16)(50))) || (u8Slur == 1))
 [e $ ! || <= F15959 -> - -> *U + &U F15956 * -> F15961 `ux -> -> # *U &U F15956 `ui `ux `ui -> -> -> 50 `i `us `ui `ul == -> _u8Slur `i -> 1 `i 2286  ]
-"340
-[; ;user_app.c: 340:     {
+"338
+[; ;user_app.c: 338:     {
 {
-"341
-[; ;user_app.c: 341:         InterruptTimerXus(au16Restless[u16ThatOtherIndexer],1);
+"339
+[; ;user_app.c: 339:         InterruptTimerXus(au16Restless[u16ThatOtherIndexer],1);
 [e ( _InterruptTimerXus (2 , *U + &U F15955 * -> F15961 `ux -> -> # *U &U F15955 `ui `ux -> -> 1 `i `a ]
-"342
-[; ;user_app.c: 342:     }
+"340
+[; ;user_app.c: 340:     }
 }
 [e :U 2286 ]
-"343
-[; ;user_app.c: 343:         if((u32MSeconds >= (au16RestlessTime[u16ThatOtherIndexer] - (u16)(50))) && (u8Slur != 1))
+"341
+[; ;user_app.c: 341:         if((u32MSeconds >= (au16RestlessTime[u16ThatOtherIndexer] - (u16)(50))) && (u8Slur != 1))
 [e $ ! && >= F15959 -> - -> *U + &U F15956 * -> F15961 `ux -> -> # *U &U F15956 `ui `ux `ui -> -> -> 50 `i `us `ui `ul != -> _u8Slur `i -> 1 `i 2287  ]
-"344
-[; ;user_app.c: 344:     {
+"342
+[; ;user_app.c: 342:     {
 {
-"345
-[; ;user_app.c: 345:         InterruptTimerXus(0,1);
+"343
+[; ;user_app.c: 343:         InterruptTimerXus(0,1);
 [e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 1 `i `a ]
-"346
-[; ;user_app.c: 346:     }
+"344
+[; ;user_app.c: 344:     }
 }
 [e :U 2287 ]
-"347
-[; ;user_app.c: 347:     if(u32MSeconds >= (au16RestlessTime[u16ThatOtherIndexer]))
+"345
+[; ;user_app.c: 345:     if(u32MSeconds >= (au16RestlessTime[u16ThatOtherIndexer]))
 [e $ ! >= F15959 -> *U + &U F15956 * -> F15961 `ux -> -> # *U &U F15956 `ui `ux `ul 2288  ]
-"348
-[; ;user_app.c: 348:     {
+"346
+[; ;user_app.c: 346:     {
 {
-"349
-[; ;user_app.c: 349:         u16ThatOtherIndexer += 1;
+"347
+[; ;user_app.c: 347:         u16ThatOtherIndexer += 1;
 [e =+ F15961 -> -> 1 `i `us ]
-"350
-[; ;user_app.c: 350:         u32MSeconds = 0;
+"348
+[; ;user_app.c: 348:         u32MSeconds = 0;
 [e = F15959 -> -> -> 0 `i `l `ul ]
-"351
-[; ;user_app.c: 351:     }
+"349
+[; ;user_app.c: 349:     }
 }
 [e :U 2288 ]
-"352
-[; ;user_app.c: 352:     if(u16ThatOtherIndexer == 20)
+"350
+[; ;user_app.c: 350:     if(u16ThatOtherIndexer == 20)
 [e $ ! == -> F15961 `ui -> -> 20 `i `ui 2289  ]
-"353
-[; ;user_app.c: 353:     {
+"351
+[; ;user_app.c: 351:     {
 {
-"354
-[; ;user_app.c: 354:         u16ThatOtherIndexer = 0;
+"352
+[; ;user_app.c: 352:         u16ThatOtherIndexer = 0;
 [e = F15961 -> -> 0 `i `us ]
-"355
-[; ;user_app.c: 355:         u8SongSwitch = 0;
+"353
+[; ;user_app.c: 353:         u8SongSwitch = 0;
 [e = F15954 -> -> 0 `i `uc ]
-"356
-[; ;user_app.c: 356:         InterruptTimerXus(0,0);
+"354
+[; ;user_app.c: 354:         InterruptTimerXus(0,0);
 [e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 0 `i `a ]
-"357
-[; ;user_app.c: 357:     }
+"355
+[; ;user_app.c: 355:     }
 }
 [e :U 2289 ]
-"359
-[; ;user_app.c: 359:     u32MSeconds += 1;
+"357
+[; ;user_app.c: 357:     u32MSeconds += 1;
 [e =+ F15959 -> -> -> 1 `i `l `ul ]
-"360
-[; ;user_app.c: 360:     }
+"358
+[; ;user_app.c: 358:     }
 }
 [e :U 2284 ]
-"370
-[; ;user_app.c: 370:     if(1)
+"362
+[; ;user_app.c: 362:     if(1)
 [e $ ! != -> 1 `i -> 0 `i 2290  ]
-"371
-[; ;user_app.c: 371:     {
+"363
+[; ;user_app.c: 363:     {
 {
-"374
-[; ;user_app.c: 374:         if((PORTB & 0b00000001) != 0)
+"366
+[; ;user_app.c: 366:         if((PORTB & 0b00000001) != 0)
 [e $ ! != & -> _PORTB `i -> 1 `i -> 0 `i 2291  ]
-"375
-[; ;user_app.c: 375:         {
+"367
+[; ;user_app.c: 367:         {
 {
-"376
-[; ;user_app.c: 376:             u8SongSwitch = 1;
+"368
+[; ;user_app.c: 368:             u8SongSwitch = 1;
 [e = F15954 -> -> 1 `i `uc ]
-"378
-[; ;user_app.c: 378:         }
+"370
+[; ;user_app.c: 370:         }
 }
 [e :U 2291 ]
-"382
-[; ;user_app.c: 382:         if((u8SongSwitch == 1)){
+"374
+[; ;user_app.c: 374:         if((u8SongSwitch == 1)){
 [e $ ! == -> F15954 `i -> 1 `i 2292  ]
 {
-"384
-[; ;user_app.c: 384:             if((u16ThatIndexer == 7) || (u16ThatIndexer == 13) || (u16ThatIndexer == 14))
+"376
+[; ;user_app.c: 376:             if((u16ThatIndexer == 7) || (u16ThatIndexer == 13) || (u16ThatIndexer == 14))
 [e $ ! || || == -> F15960 `ui -> -> 7 `i `ui == -> F15960 `ui -> -> 13 `i `ui == -> F15960 `ui -> -> 14 `i `ui 2293  ]
-"385
-[; ;user_app.c: 385:             {
+"377
+[; ;user_app.c: 377:             {
 {
-"386
-[; ;user_app.c: 386:                 u8Slur = 1;
+"378
+[; ;user_app.c: 378:                 u8Slur = 1;
 [e = _u8Slur -> -> 1 `i `uc ]
-"387
-[; ;user_app.c: 387:             }
+"379
+[; ;user_app.c: 379:             }
 }
 [e :U 2293 ]
-"388
-[; ;user_app.c: 388:             if((u16ThatIndexer == 23) || (u16ThatIndexer == 33) || (u16ThatIndexer == 34))
+"380
+[; ;user_app.c: 380:             if((u16ThatIndexer == 23) || (u16ThatIndexer == 33) || (u16ThatIndexer == 34))
 [e $ ! || || == -> F15960 `ui -> -> 23 `i `ui == -> F15960 `ui -> -> 33 `i `ui == -> F15960 `ui -> -> 34 `i `ui 2294  ]
+"381
+[; ;user_app.c: 381:             {
+{
+"382
+[; ;user_app.c: 382:                 u8Slur = 1;
+[e = _u8Slur -> -> 1 `i `uc ]
+"383
+[; ;user_app.c: 383:             }
+}
+[e :U 2294 ]
+"388
+[; ;user_app.c: 388:             if((u32MSeconds <= (au16MyTime[u16ThatIndexer] - (u16)(50))) || (u8Slur == 1))
+[e $ ! || <= F15959 -> - -> *U + &U F15957 * -> F15960 `ux -> -> # *U &U F15957 `ui `ux `ui -> -> -> 50 `i `us `ui `ul == -> _u8Slur `i -> 1 `i 2295  ]
 "389
 [; ;user_app.c: 389:             {
 {
 "390
-[; ;user_app.c: 390:                 u8Slur = 1;
-[e = _u8Slur -> -> 1 `i `uc ]
+[; ;user_app.c: 390:                 InterruptTimerXus(au16MyNotes[u16ThatIndexer],1);
+[e ( _InterruptTimerXus (2 , *U + &U F15958 * -> F15960 `ux -> -> # *U &U F15958 `ui `ux -> -> 1 `i `a ]
 "391
 [; ;user_app.c: 391:             }
 }
-[e :U 2294 ]
+[e :U 2295 ]
+"392
+[; ;user_app.c: 392:             if((u32MSeconds >= (au16MyTime[u16ThatIndexer] - (u16)(50))) && (u8Slur != 1))
+[e $ ! && >= F15959 -> - -> *U + &U F15957 * -> F15960 `ux -> -> # *U &U F15957 `ui `ux `ui -> -> -> 50 `i `us `ui `ul != -> _u8Slur `i -> 1 `i 2296  ]
+"393
+[; ;user_app.c: 393:             {
+{
+"394
+[; ;user_app.c: 394:                 InterruptTimerXus(0,1);
+[e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 1 `i `a ]
+"395
+[; ;user_app.c: 395:             }
+}
+[e :U 2296 ]
 "396
-[; ;user_app.c: 396:             if((u32MSeconds <= (au16MyTime[u16ThatIndexer] - (u16)(50))) || (u8Slur == 1))
-[e $ ! || <= F15959 -> - -> *U + &U F15957 * -> F15960 `ux -> -> # *U &U F15957 `ui `ux `ui -> -> -> 50 `i `us `ui `ul == -> _u8Slur `i -> 1 `i 2295  ]
+[; ;user_app.c: 396:             if(u32MSeconds >= (au16MyTime[u16ThatIndexer]))
+[e $ ! >= F15959 -> *U + &U F15957 * -> F15960 `ux -> -> # *U &U F15957 `ui `ux `ul 2297  ]
 "397
 [; ;user_app.c: 397:             {
 {
 "398
-[; ;user_app.c: 398:                 InterruptTimerXus(au16MyNotes[u16ThatIndexer],1);
-[e ( _InterruptTimerXus (2 , *U + &U F15958 * -> F15960 `ux -> -> # *U &U F15958 `ui `ux -> -> 1 `i `a ]
-"399
-[; ;user_app.c: 399:             }
-}
-[e :U 2295 ]
-"400
-[; ;user_app.c: 400:             if((u32MSeconds >= (au16MyTime[u16ThatIndexer] - (u16)(50))) && (u8Slur != 1))
-[e $ ! && >= F15959 -> - -> *U + &U F15957 * -> F15960 `ux -> -> # *U &U F15957 `ui `ux `ui -> -> -> 50 `i `us `ui `ul != -> _u8Slur `i -> 1 `i 2296  ]
-"401
-[; ;user_app.c: 401:             {
-{
-"402
-[; ;user_app.c: 402:                 InterruptTimerXus(0,1);
-[e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 1 `i `a ]
-"403
-[; ;user_app.c: 403:             }
-}
-[e :U 2296 ]
-"404
-[; ;user_app.c: 404:             if(u32MSeconds >= (au16MyTime[u16ThatIndexer]))
-[e $ ! >= F15959 -> *U + &U F15957 * -> F15960 `ux -> -> # *U &U F15957 `ui `ux `ul 2297  ]
-"405
-[; ;user_app.c: 405:             {
-{
-"406
-[; ;user_app.c: 406:                 u16ThatIndexer += 1;
+[; ;user_app.c: 398:                 u16ThatIndexer += 1;
 [e =+ F15960 -> -> 1 `i `us ]
-"407
-[; ;user_app.c: 407:                 u32MSeconds = 0;
+"399
+[; ;user_app.c: 399:                 u32MSeconds = 0;
 [e = F15959 -> -> -> 0 `i `l `ul ]
-"408
-[; ;user_app.c: 408:             }
+"400
+[; ;user_app.c: 400:             }
 }
 [e :U 2297 ]
-"409
-[; ;user_app.c: 409:             if(u16ThatIndexer == 41)
+"401
+[; ;user_app.c: 401:             if(u16ThatIndexer == 41)
 [e $ ! == -> F15960 `ui -> -> 41 `i `ui 2298  ]
-"410
-[; ;user_app.c: 410:             {
+"402
+[; ;user_app.c: 402:             {
 {
-"411
-[; ;user_app.c: 411:                 u16ThatIndexer = 26;
+"403
+[; ;user_app.c: 403:                 u16ThatIndexer = 26;
 [e = F15960 -> -> 26 `i `us ]
-"412
-[; ;user_app.c: 412:                 u8SongSwitch = 0;
+"404
+[; ;user_app.c: 404:                 u8SongSwitch = 0;
 [e = F15954 -> -> 0 `i `uc ]
-"413
-[; ;user_app.c: 413:                 InterruptTimerXus(0,0);
+"405
+[; ;user_app.c: 405:                 InterruptTimerXus(0,0);
 [e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 0 `i `a ]
-"414
-[; ;user_app.c: 414:             }
+"406
+[; ;user_app.c: 406:             }
 }
 [e :U 2298 ]
-"416
-[; ;user_app.c: 416:             u32MSeconds += 1;
+"408
+[; ;user_app.c: 408:             u32MSeconds += 1;
 [e =+ F15959 -> -> -> 1 `i `l `ul ]
-"417
-[; ;user_app.c: 417:         }
+"409
+[; ;user_app.c: 409:         }
 }
 [e :U 2292 ]
-"419
-[; ;user_app.c: 419:     }
+"411
+[; ;user_app.c: 411:     }
 }
 [e :U 2290 ]
-"423
-[; ;user_app.c: 423: }
+"415
+[; ;user_app.c: 415: }
 [e :UE 2277 ]
 }
